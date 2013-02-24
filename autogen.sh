@@ -19,6 +19,8 @@ which autoreconf || {
 	exit 1
 }
 
+gtkdocize || exit 1
+
 echo "running autoreconf --force --install --verbose"
 autoreconf --force --install --verbose || exit $?
 
